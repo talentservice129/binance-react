@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: "BinancePlex", "Arial", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+input {
+  background: #181A20;
+  color: #EAECEF;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #181A20 inset;
+  box-shadow: 0 0 0 30px #181A20 inset;
+  -webkit-text-fill-color: #EAECEF;
+}
+
+input:autofill {
+  -moz-box-shadow: 0 0 0 30px #181A20 inset;
+  box-shadow: 0 0 0 30px #181A20 inset;
+  -moz-text-fill-color: #EAECEF;
+}
+
+input:-moz-autofill {
+  -moz-box-shadow: 0 0 0 30px #181A20 inset;
+  box-shadow: 0 0 0 30px #181A20 inset;
+  -moz-text-fill-color: #EAECEF;
+}
+
+input:-ms-input-placeholder {
+  box-shadow: 0 0 0 30px #181A20 inset;
+  -ms-text-fill-color: #EAECEF;
+}
+
+input:focus:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #181A20 inset;
+  box-shadow: 0 0 0 30px #181A20 inset;
+  -webkit-text-fill-color: #EAECEF;
+}
+
+input:-internal-autofill-selected {
+  -webkit-box-shadow: 0 0 0 30px #181A20 inset;
+  box-shadow: 0 0 0 30px #181A20 inset;
+  -webkit-text-fill-color: #EAECEF;
+}
+
+input:-internal-autofill-selected:focus {
+  -webkit-text-fill-color: #EAECEF;
+}
+
+.bn-spinner__nezha {
+  grid-gap: 4px;
+  align-items: center;
+  display: inline-flex;
+  gap: 4px;
+  justify-content: center;
+  padding: var(--space-m)
+}
+
+.bn-spinner__nezha>.nezha-line {
+  -webkit-animation: jump-scaleY 1.5s linear infinite;
+  animation: jump-scaleY 1.5s linear infinite;
+  background-color: #FCD535;
+  height: 8px;
+  transform-origin: top;
+  width: 4px
+}
+
+.bn-spinner>svg {
+    height: 1em;
+    width: 1em
+}
+
+.bn-spinner svg.css {
+    -webkit-animation: spin 1.8s linear infinite;
+    animation: spin 1.8s linear infinite
+}
+
+.bn-spinner circle.css {
+    stroke-dasharray: 90,150;
+    stroke-dashoffset: 0;
+    stroke-width: 2.2;
+    stroke-linecap: round;
+    -webkit-animation: spin-dash 1.5s ease-in-out infinite;
+    animation: spin-dash 1.5s ease-in-out infinite
+}
+
+@-webkit-keyframes jump-scaleY {
+  0% {
+      transform: translateY(0) scaleY(1)
+  }
+
+  7.5% {
+      transform: translateY(-120%) scaleY(2)
+  }
+
+  15%,35% {
+      transform: translateY(-120%) scaleY(.5)
+  }
+
+  43.5% {
+      transform: translateY(0) scaleY(2)
+  }
+
+  52.5%,72.5% {
+      transform: translateY(120%) scaleY(.5)
+  }
+
+  80%,to {
+      transform: translateY(0) scaleY(1)
+  }
+}
+
+@keyframes jump-scaleY {
+  0% {
+      transform: translateY(0) scaleY(1)
+  }
+
+  7.5% {
+      transform: translateY(-120%) scaleY(2)
+  }
+
+  15%,35% {
+      transform: translateY(-120%) scaleY(.5)
+  }
+
+  43.5% {
+      transform: translateY(0) scaleY(2)
+  }
+
+  52.5%,72.5% {
+      transform: translateY(120%) scaleY(.5)
+  }
+
+  80%,to {
+      transform: translateY(0) scaleY(1)
+  }
+}
+
+button .bn-spinner__nezha>.nezha-line {
+  height: 5px;
+  width: 3px;
+}
